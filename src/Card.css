@@ -1,0 +1,13 @@
+.Card {
+  display: grid;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 8px;
+  background: hotpink;
+  color: white;
+  box-shadow: 3px 5px gray;
+  width: 300px;
+  height: auto;
+  border: black 1px Solid;
+  margin-bottom: 20px;
+}
