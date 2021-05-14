@@ -2,7 +2,9 @@ import './Card.css'
 
 export default function Card({ name, species, gender, image }) {
   return (
+    // const colorCard = species === 'Alien' ? 'Card--alien'
     //   const [isActive, setIsActive] = useState(true)
+
     <section className="Card">
       <h2>{name}</h2>
 
