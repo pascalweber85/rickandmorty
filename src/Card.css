@@ -27,6 +27,6 @@
 }
 
 .Card--alien {
-  background: rgb(105, 208, 255);
+  background: linear-gradient(90deg, rgb(31, 156, 240), rgb(34, 193, 233));
   border: black 1px solid;
 }

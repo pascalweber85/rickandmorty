@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background: linear-gradient(90deg, black, grey, white, grey, black);
 }
 
 .App__main {

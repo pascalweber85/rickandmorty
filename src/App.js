@@ -2,12 +2,15 @@ import './App.css'
 import Card from './Card'
 import Header from './Header'
 import Navigation from './Nav'
+import Location from './Location'
 import { useState } from 'react'
 import { useEffect } from 'react'
 
 export default function App() {
   const url = 'https://rickandmortyapi.com/api/character'
+  const url1 = 'https://rickandmortyapi.com/api/location'
   const [characters, setCharacters] = useState([])
+  const [locations, setLocation] = useState([])
 
   useEffect(() => {
     fetch(url)
@@ -15,6 +18,13 @@ export default function App() {
       .then(resBody => setCharacters(resBody.results))
       .catch(error => console.error(error))
   }, [url])
+
+  useEffect(() => {
+    fetch(url1)
+      .then(res => res.json())
+      .then(resBody => setLocation(resBody.results))
+      .catch(error => console.error(error))
+  }, [url1])
 
   return (
     <div className="App">
@@ -39,6 +49,20 @@ export default function App() {
           )
         })}
       </div>
+
+      {locations.map(location => {
+        const { name, type, dimension, created, id } = location
+
+        return (
+          <Location
+            name={name}
+            type={type}
+            dimension={dimension}
+            created={created}
+            key={id}
+          />
+        )
+      })}
     </div>
   )
 }
