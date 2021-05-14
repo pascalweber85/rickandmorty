@@ -2,11 +2,10 @@ import './Card.css'
 import { useState } from 'react'
 
 export default function Card({ name, species, gender, image }) {
-  // const colorCard = species === 'Alien' ? 'Card--alien'
   const [isActive, setIsActive] = useState(false)
 
   return (
-    <section className="Card">
+    <section className={species === 'Alien' ? 'Card Card--alien' : 'Card'}>
       <h2>{name}</h2>
 
       <div className="Card__Picture">

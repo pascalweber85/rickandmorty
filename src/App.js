@@ -1,7 +1,7 @@
 import './App.css'
 import Card from './Card'
 import Header from './Header'
-import Nav from './Nav'
+import Navigation from './Nav'
 import { useState } from 'react'
 import { useEffect } from 'react'
 
@@ -19,6 +19,10 @@ export default function App() {
   return (
     <div className="App">
       <Header />
+
+      <section>
+        <Navigation />
+      </section>
 
       <div className="App__main">
         {characters.map(rickandmorty => {

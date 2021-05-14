@@ -3,7 +3,7 @@
   place-items: center;
   padding: 10px;
   border-radius: 8px;
-  background: hotpink;
+  background: linear-gradient(90deg, hotpink, rgb(214, 135, 214));
   color: white;
   box-shadow: 3px 5px gray;
   width: 350px;
