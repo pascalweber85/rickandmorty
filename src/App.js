@@ -15,6 +15,12 @@ export default function App() {
   const [locations, setLocation] = useState([])
   const [episodes, setEpisodes] = useState([])
 
+  const [isActive, setIsActive] = useState({
+    characters: true,
+    locations: false,
+    episodes: false,
+  })
+
   useEffect(() => {
     fetch(url)
       .then(res => res.json())
@@ -41,51 +47,60 @@ export default function App() {
       <Header />
 
       <section>
-        <Navigation />
+        <Navigation isActive={isActive} handleClick={handleClick} />
       </section>
 
       <div className="App__main">
-        {characters.map(rickandmorty => {
-          const { name, species, gender, id, image } = rickandmorty
+        {isActive.characters &&
+          characters.map(rickandmorty => {
+            const { name, species, gender, id, image } = rickandmorty
 
-          return (
-            <Card
-              key={id}
-              name={name}
-              species={species}
-              gender={gender}
-              image={image}
-            />
-          )
-        })}
+            return (
+              <Card
+                key={id}
+                name={name}
+                species={species}
+                gender={gender}
+                image={image}
+              />
+            )
+          })}
 
-        {locations.map(location => {
-          const { name, type, dimension, created, id } = location
+        {isActive.locations &&
+          locations.map(location => {
+            const { name, type, dimension, created, id } = location
 
-          return (
-            <Location
-              key={id}
-              name={name}
-              type={type}
-              dimension={dimension}
-              created={created}
-            />
-          )
-        })}
+            return (
+              <Location
+                key={id}
+                name={name}
+                type={type}
+                dimension={dimension}
+                created={created}
+              />
+            )
+          })}
 
-        {episodes.map(episode => {
-          const { name, air_date, episod, id } = episode
+        {isActive.episodes &&
+          episodes.map(episode => {
+            const { name, air_date, episod, id } = episode
 
-          return (
-            <Episodes
-              key={id}
-              name={name}
-              air_date={air_date}
-              episod={episod}
-            />
-          )
-        })}
+            return (
+              <Episodes
+                key={id}
+                name={name}
+                air_date={air_date}
+                episod={episod}
+              />
+            )
+          })}
       </div>
     </div>
   )
+  function handleClick(event) {
+    const value = event.target.name
+    const obj = { characters: false, episodes: false, locations: false }
+    obj[value] = true
+    setIsActive(obj)
+  }
 }

@@ -1,4 +1,4 @@
-.Button {
+/* .Button {
   background: black;
   color: white;
   border-radius: 5px;
@@ -11,3 +11,7 @@
 .Button.active {
   background: grey;
 }
+
+.Button:hover {
+  background: grey;
+} */
