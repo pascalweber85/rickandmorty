@@ -1,6 +1,6 @@
 .Card {
   display: grid;
-  justify-content: center;
+  place-items: center;
   padding: 10px;
   border-radius: 8px;
   background: hotpink;
@@ -15,6 +15,15 @@
 .Card__Picture {
   display: flex;
   border: black 1px solid;
+}
+
+.Card__Button {
+  background: black;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 15px;
+  width: 150px;
 }
 
 .Card--alien {

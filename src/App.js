@@ -1,5 +1,7 @@
 import './App.css'
 import Card from './Card'
+import Header from './Header'
+import Nav from './Nav'
 import { useState } from 'react'
 import { useEffect } from 'react'
 
@@ -16,10 +18,9 @@ export default function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h2>Home</h2>
-      </header>
-      <main>
+      <Header />
+
+      <div className="App__main">
         {characters.map(rickandmorty => {
           const { name, species, gender, id, image } = rickandmorty
 
@@ -33,7 +34,7 @@ export default function App() {
             />
           )
         })}
-      </main>
+      </div>
     </div>
   )
 }
