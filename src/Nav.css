@@ -1,0 +1,19 @@
+.Nav__Button {
+  background: linear-gradient(0deg, black, grey, black);
+  color: white;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 15px;
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.Nav__Button--active {
+  background: red;
+  border-radius: 5px;
+}
+
+.Nav__Button:hover {
+  background: grey;
+  border-radius: 5px;
+}

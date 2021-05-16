@@ -1,0 +1,14 @@
+.App-header {
+  background: linear-gradient(
+    0deg,
+    rgb(34, 193, 233),
+    grey,
+    white,
+    grey,
+    rgb(34, 193, 233)
+  );
+  color: black;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
