@@ -4,6 +4,7 @@ import Header from './Header'
 import Navigation from './Nav'
 import Location from './Location'
 import Episodes from './Episodes'
+import Filter from './Filter'
 import { useState } from 'react'
 import { useEffect } from 'react'
 
@@ -50,6 +51,8 @@ export default function App() {
         <Navigation isActive={isActive} handleClick={handleClick} />
       </section>
 
+      <Filter />
+
       <div className="App__main">
         {isActive.characters &&
           characters.map(rickandmorty => {
@@ -82,21 +85,22 @@ export default function App() {
           })}
 
         {isActive.episodes &&
-          episodes.map(episode => {
-            const { name, air_date, episod, id } = episode
+          episodes.map(episodes => {
+            const { name, air_date, episode, id } = episodes
 
             return (
               <Episodes
                 key={id}
                 name={name}
                 air_date={air_date}
-                episod={episod}
+                episode={episode}
               />
             )
           })}
       </div>
     </div>
   )
+
   function handleClick(event) {
     const value = event.target.name
     const obj = { characters: false, episodes: false, locations: false }

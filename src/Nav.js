@@ -1,13 +1,24 @@
 import './Nav.css'
-import Button from './Button'
 
 export default function Navigation({ isActive, handleClick }) {
   return (
-    <nav className="Navigation">
-      <button name="characters" onClick={handleClick} className="Nav__Button">
+    <nav>
+      <button
+        name="characters"
+        onClick={handleClick}
+        className={
+          isActive === 'characters'
+            ? 'Nav__Button Nav__Button--active '
+            : 'Nav__Button'
+        }
+      >
         Characters
       </button>
-      <button name="episodes" onClick={handleClick} className="Nav__Button">
+      <button
+        name="episodes"
+        onClick={handleClick}
+        className={isActive ? 'Nav__Button--active Nav__Button' : 'Nav__Button'}
+      >
         Episodes
       </button>
       <button name="locations" onClick={handleClick} className="Nav__Button">

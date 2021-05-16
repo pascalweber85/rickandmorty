@@ -3,11 +3,27 @@
   place-items: center;
   padding: 10px;
   border-radius: 8px;
-  background: linear-gradient(90deg, rgb(105, 255, 105), rgb(214, 135, 214));
+  background: linear-gradient(
+    0deg,
+    rgb(105, 255, 105),
+    rgb(105, 255, 105),
+    rgb(84, 150, 71),
+    rgb(66, 129, 53)
+  );
   color: white;
   box-shadow: 3px 5px gray;
   width: 350px;
   height: auto;
   border: black 1px Solid;
   margin-bottom: 20px;
+}
+
+.Episodes--2014 {
+  background: linear-gradient(
+    0deg,
+    rgb(76, 177, 224),
+    rgb(76, 177, 224),
+    rgb(96, 140, 223),
+    rgb(62, 117, 221)
+  );
 }
