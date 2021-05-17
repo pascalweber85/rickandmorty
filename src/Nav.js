@@ -2,7 +2,7 @@ import './Nav.css'
 
 export default function Navigation({ isActive, handleClick }) {
   return (
-    <nav>
+    <nav className="Navigation">
       <button name="characters" onClick={handleClick} className="Nav__Button">
         Characters
       </button>
