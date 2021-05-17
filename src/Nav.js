@@ -1,20 +1,21 @@
 import './Nav.css'
+import Button from './Button'
 
 export default function Navigation({ isActive, handleClick }) {
   return (
     <nav className="Navigation">
-      <button name="characters" onClick={handleClick} className="Nav__Button">
+      <Button onClick={handleClick} isActive={isActive === 'characters'}>
         Characters
-      </button>
-      <button name="episodes" onClick={handleClick} className="Nav__Button">
-        Episodes
-      </button>
-      <button name="locations" onClick={handleClick} className="Nav__Button">
+      </Button>
+      <Button onClick={handleClick} isActive={isActive === 'locations'}>
         Locations
-      </button>
-      <button onClick={handleClick} className="Nav__Button">
+      </Button>
+      <Button onClick={handleClick} isActive={isActive === 'episodes'}>
+        Episodes
+      </Button>
+      <Button onClick={handleClick} isActive={isActive === 'bookmarks'}>
         Bookmarks
-      </button>
+      </Button>
     </nav>
   )
 }

@@ -1,5 +1,6 @@
 import './App.css'
 import Card from './Card'
+
 import Header from './Header'
 import Navigation from './Nav'
 import Location from './Location'
